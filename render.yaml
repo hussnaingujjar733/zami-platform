@@ -25,3 +25,7 @@ services:
         sync: false
       - key: ZAMI_TEAM_ACCESS_KEY
         sync: false
+      - key: ZAMI_RESEND_API_KEY
+        sync: false
+      - key: ZAMI_RESEND_FROM
+        sync: false
