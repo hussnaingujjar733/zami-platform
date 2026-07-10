@@ -102,14 +102,23 @@ def send_admin_notification(project: dict[str, Any]) -> dict[str, Any]:
     message["Subject"] = subject
     message.set_content(body)
 
-    with smtplib.SMTP(smtp_host, smtp_port, timeout=12) as smtp:
-        smtp.starttls()
-        smtp.login(smtp_user, smtp_password)
-        smtp.send_message(message)
+    try:
+        with smtplib.SMTP(smtp_host, smtp_port, timeout=12) as smtp:
+            smtp.starttls()
+            smtp.login(smtp_user, smtp_password)
+            smtp.send_message(message)
 
-    return {
-        "status": "sent",
-        "admin_email": ADMIN_EMAIL,
-        "outbox_path": str(outbox_path),
-        "note": "Email sent successfully.",
-    }
+        return {
+            "status": "sent",
+            "admin_email": ADMIN_EMAIL,
+            "outbox_path": str(outbox_path),
+            "note": "Email sent successfully.",
+        }
+    except Exception as exc:
+        return {
+            "status": "failed_outbox_only",
+            "admin_email": ADMIN_EMAIL,
+            "outbox_path": str(outbox_path),
+            "note": "Email sending failed. Request was still saved and can be synced.",
+            "error": repr(exc)[:300],
+        }
