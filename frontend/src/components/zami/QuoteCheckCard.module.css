@@ -1,0 +1,434 @@
+.card {
+  margin-top: 15px;
+  padding: 27px;
+  border: 1px solid #cfe1d4;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 10px 32px rgba(35, 61, 44, 0.055);
+}
+
+.heading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+}
+
+.heading > span {
+  width: 47px;
+  height: 47px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: #eaf7ef;
+  color: #168a4a;
+}
+
+.heading small {
+  color: #168a4a;
+  font-size: 8px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.heading h2 {
+  margin: 4px 0 0;
+  font-size: 20px;
+  font-weight: 950;
+}
+
+.heading p {
+  margin: 7px 0 0;
+  color: #6d786f;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.heading button {
+  min-height: 41px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  border-radius: 8px;
+  background: #168a4a;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.heading button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.scoreRow {
+  margin-top: 21px;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 10px;
+}
+
+.scoreBox,
+.fileBox {
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.scoreBox {
+  border: 1px solid #c7e1cf;
+  background: #eff8f2;
+}
+
+.fileBox {
+  border: 1px solid #e1e9e4;
+  background: #f8fbf9;
+}
+
+.scoreBox small,
+.scoreBox strong,
+.scoreBox span,
+.fileBox small,
+.fileBox strong,
+.fileBox span {
+  display: block;
+}
+
+.scoreBox small,
+.fileBox small {
+  color: #6f7a72;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.scoreBox strong {
+  margin-top: 7px;
+  color: #168a4a;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 950;
+}
+
+.fileBox strong {
+  margin-top: 7px;
+  overflow: hidden;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scoreBox span,
+.fileBox span {
+  margin-top: 8px;
+  color: #68736b;
+  font-size: 8px;
+}
+
+.amounts,
+.categories,
+.redFlags,
+.limitations,
+.error,
+.missing,
+.empty,
+.loading,
+.decision {
+  margin-top: 15px;
+  padding: 17px;
+  border-radius: 10px;
+}
+
+.amounts,
+.categories {
+  border: 1px solid #e1e9e4;
+  background: #f9fbf9;
+}
+
+.amounts > strong,
+.categories > strong,
+.redFlags > strong,
+.limitations > strong {
+  display: block;
+  font-size: 9px;
+}
+
+.amounts > div {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.amounts article {
+  padding: 11px;
+  border: 1px solid #e7ede9;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.amounts span {
+  display: block;
+  color: #168a4a;
+  font-size: 15px;
+  font-weight: 950;
+}
+
+.amounts p {
+  margin: 5px 0 0;
+  color: #6d786f;
+  font-size: 7px;
+  line-height: 1.5;
+}
+
+.categories > div {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.categories span {
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: #eaf7ef;
+  color: #168a4a;
+  font-size: 7px;
+  font-weight: 850;
+}
+
+.fieldGrid {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.fieldGrid article {
+  padding: 12px;
+  display: flex;
+  gap: 8px;
+  border-radius: 9px;
+}
+
+.fieldPresent {
+  border: 1px solid #cfe1d4;
+  background: #eff8f2;
+  color: #168a4a;
+}
+
+.fieldMissing {
+  border: 1px solid #ead5b0;
+  background: #fdf8ed;
+  color: #9a620e;
+}
+
+.fieldGrid strong,
+.fieldGrid small {
+  display: block;
+}
+
+.fieldGrid strong {
+  color: #2d3831;
+  font-size: 8px;
+}
+
+.fieldGrid small {
+  margin-top: 4px;
+  color: #6f7a72;
+  font-size: 7px;
+}
+
+.redFlags {
+  border: 1px solid #ead5b0;
+  background: #fdf8ed;
+}
+
+.redFlags article {
+  margin-top: 10px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.redFlags em {
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-size: 7px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.high {
+  background: #ffe2df;
+  color: #b3261e;
+}
+
+.medium {
+  background: #f7ead4;
+  color: #96600d;
+}
+
+.low {
+  background: #eef1f0;
+  color: #617069;
+}
+
+.redFlags h3 {
+  margin: 0;
+  font-size: 10px;
+}
+
+.redFlags p {
+  margin: 5px 0 0;
+  color: #6f6654;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.decision {
+  display: flex;
+  gap: 10px;
+  border: 1px solid #ead5b0;
+  background: #fdf8ed;
+  color: #96600d;
+}
+
+.decision strong {
+  display: block;
+  font-size: 9px;
+}
+
+.decision p {
+  margin: 5px 0 0;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.limitations {
+  border: 1px solid #ead5b0;
+  background: #fdf8ed;
+}
+
+.limitations ul {
+  margin: 9px 0 0;
+  padding-left: 18px;
+  color: #716854;
+  font-size: 8px;
+  line-height: 1.7;
+}
+
+.missing {
+  border: 1px dashed #d8c39f;
+  background: #fffaf2;
+}
+
+.missing > strong {
+  font-size: 9px;
+}
+
+.missing > div {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.missing span {
+  padding: 7px 9px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 999px;
+  background: #f7ead4;
+  color: #96600d;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.error {
+  display: flex;
+  gap: 10px;
+  border: 1px solid #e5c49c;
+  background: #fdf6e9;
+  color: #98610d;
+}
+
+.error strong {
+  font-size: 9px;
+}
+
+.error p {
+  margin: 5px 0 0;
+  font-size: 8px;
+  line-height: 1.55;
+}
+
+.empty,
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px dashed #cedbd1;
+  background: #fafcfa;
+  color: #68736b;
+}
+
+.empty strong,
+.loading strong {
+  display: block;
+  color: #3e4941;
+  font-size: 9px;
+}
+
+.empty p,
+.loading small {
+  margin: 5px 0 0;
+  display: block;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.saved {
+  margin-top: 12px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #cfe1d4;
+  border-radius: 9px;
+  background: #eff8f2;
+  color: #168a4a;
+  font-size: 8px;
+  font-weight: 850;
+}
+
+.spinner {
+  animation: spin 0.85s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 850px) {
+  .heading {
+    grid-template-columns: auto 1fr;
+  }
+
+  .heading button {
+    grid-column: 1 / -1;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .scoreRow,
+  .fieldGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -6,7 +6,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr">
       <body>
         {children}
-        <ApiStatus />
+        {process.env.NODE_ENV === "development" && <ApiStatus />}
       </body>
     </html>
   );

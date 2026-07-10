@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+reportlab
+xgboost
+numpy
+joblib
+scikit-learn
+pypdf
+PyMuPDF
+pytesseract
+Pillow

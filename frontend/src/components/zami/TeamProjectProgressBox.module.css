@@ -1,0 +1,162 @@
+.box {
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid #dfe8e1;
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+.heading {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: #168a4a;
+}
+
+.heading h3 {
+  margin: 0;
+  color: #26312a;
+  font-size: 15px;
+  font-weight: 950;
+}
+
+.heading p {
+  margin: 4px 0 0;
+  color: #68736b;
+  font-size: 8px;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.grid label,
+.updateForm {
+  display: grid;
+  gap: 7px;
+}
+
+.grid label {
+  color: #4f5d54;
+  font-size: 7px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.grid input,
+.updateForm input,
+.updateForm textarea {
+  width: 100%;
+  min-height: 39px;
+  padding: 0 11px;
+  border: 1px solid #cfe1d4;
+  border-radius: 10px;
+  color: #26312a;
+  font: inherit;
+  font-size: 10px;
+  outline: none;
+}
+
+.updateForm textarea {
+  min-height: 78px;
+  padding-top: 10px;
+  resize: vertical;
+}
+
+.box button {
+  min-height: 38px;
+  margin-top: 12px;
+  padding: 0 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 0;
+  border-radius: 999px;
+  background: #168a4a;
+  color: #ffffff;
+  font-size: 8px;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.box button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.updateForm {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #eef3ef;
+}
+
+.updateForm h4 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #26312a;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.notice,
+.error {
+  margin: 12px 0 0;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 8px;
+  font-weight: 850;
+}
+
+.notice {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #bfe6c8;
+  background: #effaf2;
+  color: #168a4a;
+}
+
+.error {
+  border: 1px solid #e6b1a9;
+  background: #fff0ee;
+  color: #b3261e;
+}
+
+.timeline {
+  display: grid;
+  gap: 9px;
+  margin-top: 13px;
+}
+
+.timeline article {
+  padding: 11px;
+  border: 1px solid #eef3ef;
+  border-radius: 11px;
+  background: #f8fbf9;
+}
+
+.timeline strong {
+  display: block;
+  color: #26312a;
+  font-size: 9px;
+  font-weight: 950;
+}
+
+.timeline p {
+  margin: 5px 0 0;
+  color: #566158;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.timeline small {
+  display: block;
+  margin-top: 7px;
+  color: #8a938c;
+  font-size: 7px;
+}

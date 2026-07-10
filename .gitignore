@@ -5,3 +5,7 @@ frontend/.next/
 *.pyc
 .env
 .env.local
+backend/data/
+nohup.out
+**/__pycache__/
+.env.*

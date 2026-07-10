@@ -1,0 +1,33 @@
+{
+  "model_name": "zami_renovation_cost",
+  "model_version": "b2c7324b2981",
+  "format": "xgboost_native_json",
+  "feature_names": [
+    "surface",
+    "dpe_encoded",
+    "zipcode",
+    "surface_squared",
+    "region_code"
+  ],
+  "dpe_classes": [
+    "D",
+    "E",
+    "F",
+    "G"
+  ],
+  "dpe_encoding": {
+    "D": 0,
+    "E": 1,
+    "F": 2,
+    "G": 3
+  },
+  "output": "indicative_renovation_cost_eur",
+  "validation_metrics_available": false,
+  "production_status": "experimental",
+  "limitations": [
+    "No documented validation metrics are available.",
+    "Only verified DPE classes D, E, F and G are supported.",
+    "The result is not a contractor quotation.",
+    "Subsidies and savings are not confirmed."
+  ]
+}

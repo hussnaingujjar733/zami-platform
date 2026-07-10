@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: zami-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ZAMI_SUPABASE_URL
+        sync: false
+      - key: ZAMI_SUPABASE_SERVICE_KEY
+        sync: false
+      - key: ZAMI_ADMIN_EMAIL
+        sync: false
+      - key: ZAMI_EMAIL_FROM
+        sync: false
+      - key: ZAMI_SMTP_HOST
+        sync: false
+      - key: ZAMI_SMTP_PORT
+        value: "587"
+      - key: ZAMI_SMTP_USER
+        sync: false
+      - key: ZAMI_SMTP_PASSWORD
+        sync: false
+      - key: ZAMI_TEAM_ACCESS_KEY
+        sync: false
